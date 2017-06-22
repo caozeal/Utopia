@@ -34,4 +34,10 @@ public class TryAboutHttp {
 		}
 		return "result";
 	}
+	
+	public static void main(String[] args) {
+		TryAboutChild tryAboutChild = new TryAboutChild();
+		tryAboutChild.setLastName("qwe");
+		tryAboutChild.setHomeTown("222");
+	}
 }
