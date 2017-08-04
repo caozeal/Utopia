@@ -7,6 +7,8 @@ import java.io.OutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,6 +26,16 @@ import org.springframework.web.multipart.MultipartFile;
 @Controller
 public class TryAboutHttp {
 	
+	private static final Logger logger = LoggerFactory.getLogger(TryAboutHttp.class);
+	
+	/**
+	 * 上传文件测试，从页面上传文件到服务器
+	 * <p>
+	 * 创建时间：2017年8月4日上午11:20:14
+	 * @author caozhiyong
+	 * @param file
+	 * @return
+	 */
 	@RequestMapping("uploadFile")
 	@ResponseBody
 	public String uploadFile(
@@ -42,6 +54,16 @@ public class TryAboutHttp {
 		return "result";
 	}
 	
+	/**
+	 * 打开文件测试，这次是为了测试在浏览器中直接打开pdf文件
+	 * <p>
+	 * 直接给路径在页面打开没问题，以流的形式传输没能成功实现
+	 * <p>
+	 * 创建时间：2017年8月4日上午11:20:35
+	 * @author caozhiyong
+	 * @param request
+	 * @param response
+	 */
 	@RequestMapping("openFile")
 	@ResponseBody
 	public void openFile(HttpServletRequest request,HttpServletResponse response){
@@ -63,12 +85,8 @@ public class TryAboutHttp {
 			ops.flush();
 			ops.close();
 		}catch (Exception e) {
-			// TODO: handle exception
+			logger.error("打开文件出错", e);
 		}
 	}
-//	public static void main(String[] args) {
-//		TryAboutChild tryAboutChild = new TryAboutChild();
-//		tryAboutChild.setLastName("qwe");
-//		tryAboutChild.setHomeTown("222");
-//	}
+
 }

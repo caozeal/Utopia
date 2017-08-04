@@ -7,6 +7,7 @@
 	<property name="LOG_HOME" value="${catalina.base}/logs" />
 	<property name="SYSTEM_NAME" value="UtopiaLand" />
 	<statusListener class="ch.qos.logback.core.status.NopStatusListener" />
+	<!--  TRACE < DEBUG < INFO < WARN < ERROR  -->
 	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
 			<level>${logback.stdout.level}</level>
@@ -63,7 +64,7 @@
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<fileNamePattern>${LOG_HOME}/${SYSTEM_NAME}_jdbc.%d{yyyy-MM-dd}.log
 			</fileNamePattern>
-			<maxHistory>7</maxHistory>
+			<maxHistory>20</maxHistory>
 		</rollingPolicy>
 	</appender>
 	<appender name="TRACE-BEHAVIOR"
@@ -78,18 +79,12 @@
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>${LOG_HOME}/${SYSTEM_NAME}_trace_behavior.%d{yyyy-MM-dd}.log
             </fileNamePattern>
-            <maxHistory>7</maxHistory>
+            <maxHistory>20</maxHistory>
         </rollingPolicy>
     </appender>
-	<appender name="arteryAppender"
-		class="com.thunisoft.artery.support.log.ArteryAppender">
-	</appender>
+    
 	<logger name="org.springframework" level="error" />
-	<logger name="com.thunisoft.crs" level="${logback.common.level}" />
-	<logger name="com.thunisoft.artery" level="${logback.common.level}" />
 	<logger name="org.apache" level="error" />
-	<logger name="com.thunisoft.summer" level="${logback.common.level}" />
-	<logger name="com.thunisoft.test" level="${logback.common.level}" />
 	<logger name="org.quartz" level="error" />
 	<logger name="org.hibernate" level="error" />
 	
@@ -116,8 +111,5 @@
 		<appender-ref ref="stdout" />
 		<appender-ref ref="R" />
         <appender-ref ref="FILE-ERROR" />
-        <!-- 需要数据库日志时结合log4jdbc使用，在这加不对 -->
-		<!-- <appender-ref ref="FILE-JDBC" /> -->
-		<appender-ref ref="arteryAppender" />
 	</root>
 </configuration>

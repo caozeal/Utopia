@@ -12,7 +12,9 @@ public class TryAboutNIO2Test {
 
 	
 	@Test
-	public void openPath(){
-		TryAboutNIO2.handlePath("web/resource");
+	public void pathTest(){
+		String path = "C:/Users/hy/Downloads";
+		TryAboutNIO2.handlePath(path);
+		TryAboutNIO2.searchPdf(path);
 	}
 }

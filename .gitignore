@@ -28,3 +28,5 @@ Source/UtopiaLand/.settings/.jsdtscope
 Source/UtopiaLand/.classpath
 *.prefs
 *.component
+*.prefs
+Source/UtopiaLand/.tern-project
