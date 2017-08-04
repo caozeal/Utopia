@@ -14,7 +14,7 @@ public class HelloController {
      * @author caozeal
      * @return
      */
-    @RequestMapping("/hello")
+    @RequestMapping("hello")
     public @ResponseBody String test() {
         return "hello, world! This com from spring!";
     }

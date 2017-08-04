@@ -21,10 +21,26 @@
             org.springframework.web.context.ContextLoaderListener
         </listener-class>
      </listener>
-         <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>*.txt</url-pattern>
     </servlet-mapping>
+     <servlet-mapping>   
+         <servlet-name>default</servlet-name>   
+         <url-pattern>*.css</url-pattern>   
+     </servlet-mapping>
+     <servlet-mapping>   
+         <servlet-name>default</servlet-name>   
+         <url-pattern>*.js</url-pattern>   
+     </servlet-mapping>
+     <servlet-mapping>   
+         <servlet-name>default</servlet-name>   
+         <url-pattern>*.html</url-pattern>   
+     </servlet-mapping>
+     <servlet-mapping>   
+         <servlet-name>default</servlet-name>   
+         <url-pattern>*.pdf</url-pattern>   
+     </servlet-mapping>
      <servlet>
         <servlet-name>UtopiaLand</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
