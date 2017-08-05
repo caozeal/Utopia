@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration debug="false" scan="true" scanPeriod="30 seconds">
+	<property resource="props/config.properties" />
+	<property resource="props/local.properties" />
+	<!-- 说明：tomcat中间件配置的日志路径 -->
+	<property name="LOG_HOME" value="${catalina.base}/logs" />
+	<property name="SYSTEM_NAME" value="UtopiaLand" />
+	<statusListener class="ch.qos.logback.core.status.NopStatusListener" />
+	<!--  TRACE < DEBUG < INFO < WARN < ERROR  -->
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>${logback.stdout.level}</level>
+		</filter>
+		<Target>System.out</Target>
+		<encoder>
+			<pattern>
+			   %d{yyyy-MM-dd HH:mm:ss.SSS}[%-5level][%thread][%logger{20}:%L] %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	<appender name="R"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${LOG_HOME}/${SYSTEM_NAME}_stdout.log</File>
+		<encoder>
+			<pattern>
+			   %d{yyyy-MM-dd HH:mm:ss.SSS}[%-5level][%thread][%logger{20}:%L] %msg%n
+			</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/${SYSTEM_NAME}_stdout.%d.log
+			</fileNamePattern>
+		</rollingPolicy>
+	</appender>
+	<appender name="FILE-ERROR"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>error</level>
+		</filter>
+		<File>${LOG_HOME}/${SYSTEM_NAME}_stderr.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${LOG_HOME}/${SYSTEM_NAME}_stderr.%d{yyyy-MM-dd}.log
+			</FileNamePattern>
+			<maxHistory>20</maxHistory>
+		</rollingPolicy>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>
+				%d{yyyy-MM-dd HH:mm:ss.SSS}[%-5level][%thread][%logger{20}:%L] %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	<appender name="FILE-JDBC"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${LOG_HOME}/${SYSTEM_NAME}_jdbc.log</File>
+		<encoder>
+			<pattern>
+				%d{yyyy-MM-dd HH:mm:ss.SSS}[%-5level][%thread][%logger{20}:%L] %msg%n
+			</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>debug</level>
+		</filter>
+		<append>true</append>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/${SYSTEM_NAME}_jdbc.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+			<maxHistory>20</maxHistory>
+		</rollingPolicy>
+	</appender>
+	<appender name="TRACE-BEHAVIOR"
+        class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOG_HOME}/${SYSTEM_NAME}_trace_behavior.log</File>
+        <encoder>
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss.SSS}[%-5level][%thread][%logger{20}:%L] %msg%n
+            </pattern>
+        </encoder>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/${SYSTEM_NAME}_trace_behavior.%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+            <maxHistory>20</maxHistory>
+        </rollingPolicy>
+    </appender>
+    
+	<logger name="org.springframework" level="error" />
+	<logger name="org.apache" level="error" />
+	<logger name="org.quartz" level="error" />
+	<logger name="org.hibernate" level="error" />
+	
+	<logger name="trace.behavior" additivity="false" level="${logback.trace.level}">
+	  <appender-ref ref="TRACE-BEHAVIOR" />
+    </logger>
+	<!-- sql -->
+	<logger name="com.ibatis" level="${logback.common.level}" />
+	<logger name="com.ibatis.common.jdbc.SimpleDataSource" level="${logback.common.level}" />
+	<logger name="com.ibatis.common.jdbc.ScriptRunner" level="${logback.common.level}" />
+	<logger name="com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate"
+		level="${logback.common.level}" />
+	<logger name="org.mybatis" level="${logback.common.level}" />
+
+	<logger name="jdbc.sqlonly" level="${logback.sql.level}" />
+	<logger name="jdbc.resultsettable" level="${logback.sql.level}" />
+	<logger name="jdbc.resultset" level="${logback.sql.level}" />
+	<logger name="jdbc.connection" level="${logback.sql.level}" />
+	<logger name="jdbc.audit" level="${logback.sql.level}" />
+	<logger name="jdbc.sqltiming" additivity="false" level="${logback.sql.level}">
+		<appender-ref ref="FILE-JDBC" />
+	</logger>
+	<root level="${logback.root.level}">
+		<appender-ref ref="stdout" />
+		<appender-ref ref="R" />
+        <appender-ref ref="FILE-ERROR" />
+	</root>
+</configuration>
