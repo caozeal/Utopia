@@ -83,4 +83,16 @@ public class TryAboutNIO2 {
 			logger.error("查找pdf文件出错", e);
 		} 
 	}
+	
+	public static void handleFiles(String path){
+		Path target = Paths.get(path);
+		try {
+			//如果文件已经存在，会抛出FileAlreadyExistsException
+			Path file = Files.createFile(target);
+			logger.info("创建文件成功");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			logger.error("处理file出错", e);
+		}
+	}
 }

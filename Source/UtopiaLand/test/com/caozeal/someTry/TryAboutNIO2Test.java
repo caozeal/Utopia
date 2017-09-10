@@ -17,4 +17,10 @@ public class TryAboutNIO2Test {
 		TryAboutNIO2.handlePath(path);
 		TryAboutNIO2.searchPdf(path);
 	}
+	
+	@Test
+	public void filesTest(){
+		String path = "F:/下载/test.txt";
+		TryAboutNIO2.handleFiles(path);
+	}
 }
