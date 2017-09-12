@@ -7,6 +7,7 @@ package com.caozeal.someTry;
  */
 
 import org.junit.Test;
+import static org.assertj.core.api.Assertions.*;
 
 public class TryAboutNIO2Test {
 
@@ -23,4 +24,11 @@ public class TryAboutNIO2Test {
 		String path = "F:/下载/test.txt";
 		TryAboutNIO2.handleFiles(path);
 	}
+
+	@Test
+    public void assertTest(){
+	    assertThat(true);
+    }
+
+
 }

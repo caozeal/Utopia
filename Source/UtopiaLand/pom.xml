@@ -86,6 +86,16 @@
 			<artifactId>assertj-core</artifactId>
 			<version>3.8.0</version>
 		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+		</dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.5.3</version>
+        </dependency>
 	</dependencies>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
@@ -119,6 +129,38 @@
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
 			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<configuration>
+					<includes>com.*</includes>
+				</configuration>
+				<executions>
+					<execution>
+						<id>pre-test</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>post-test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.jacoco</groupId>
+					<artifactId>jacoco-maven-plugin</artifactId>
+					<version>0.7.9</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 	</build>
+
 </project>
