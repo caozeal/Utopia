@@ -35,3 +35,5 @@ Source/UtopiaLand/.tern-project
 /Source/UtopiaLand/*.iml
 /Source/UtopiaLand/target/m2e-wtp/web-resources/META-INF/*.MF
 /Source/UtopiaLand/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
+/Source/UtopiaLand/web/META-INF/MANIFEST.MF
+/Source/UtopiaLand/target
