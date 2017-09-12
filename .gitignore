@@ -30,3 +30,8 @@ Source/UtopiaLand/.classpath
 *.component
 *.prefs
 Source/UtopiaLand/.tern-project
+/Source/UtopiaLand/.idea/artifacts
+/Source/UtopiaLand/.idea
+/Source/UtopiaLand/*.iml
+/Source/UtopiaLand/target/m2e-wtp/web-resources/META-INF/*.MF
+/Source/UtopiaLand/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
