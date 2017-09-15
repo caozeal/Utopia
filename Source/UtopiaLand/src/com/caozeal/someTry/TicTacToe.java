@@ -10,7 +10,16 @@ public class TicTacToe {
         checkAxis(y);
         setBox(x, y);
         lastPlayer = nextPlayer();
+        if (isWin(x, y)) {
+            return "Winner is " + lastPlayer;
+        }
         return "No winner";
+    }
+
+    private boolean isWin(int x, int y) {
+        boolean occupiedHorizonLine = board[0][y - 1] + board[1][y - 1] + board[2][y - 1] == lastPlayer * 3;
+        boolean occupiedVerticalLine = board[x - 1][0] + board[x - 1][1] + board[x - 1][2] == lastPlayer * 3;
+        return occupiedHorizonLine || occupiedVerticalLine;
     }
 
     private void setBox(int x, int y) {
