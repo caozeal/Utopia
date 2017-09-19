@@ -5,9 +5,7 @@ package com.caozeal.someTry.connect4;
  * @author  caozeal
  * @version 1.0
  */
-
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
-
+import org.apache.commons.lang.StringUtils;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -53,16 +51,48 @@ public class ChessBoardTest {
 		chessBoard.putPiece(1);
 		Assert.assertEquals(ChessBoard.GREEN, chessBoard.getNextPlayer());
 	}
-	
+
 	@Ignore
 	@Test
-	public void play(){
-		chessBoard.putPiece(1);
-		chessBoard.putPiece(2);
-		chessBoard.putPiece(1);
-		chessBoard.putPiece(1);
-		chessBoard.putPiece(2);
-		chessBoard.putPiece(3);
-		
-	}
+    public void whenFullThenDraw(){
+	    String result = StringUtils.EMPTY;
+	    for(int i=0; i<chessBoard.getColumn(); i++){
+	        for(int j=0; j<chessBoard.getRows(); j++){
+	            result = chessBoard.putPiece(i+1);
+            }
+        }
+        Assert.assertEquals("It's a draw", result);
+    }
+
+    @Test
+    public void whenVerticalLineThenWin(){
+        chessBoard.putPiece(1);
+        chessBoard.putPiece(2);
+        chessBoard.putPiece(1);
+        chessBoard.putPiece(2);
+        String result = chessBoard.putPiece(1);
+        Assert.assertEquals("红方获胜", result);
+    }
+
+    @Test
+    public void whenHorizontalLineThenWin(){
+        chessBoard.putPiece(1);
+        chessBoard.putPiece(1);
+        chessBoard.putPiece(2);
+        chessBoard.putPiece(2);
+        String result = chessBoard.putPiece(3);
+        Assert.assertEquals("红方获胜", result);
+    }
+
+    @Test
+    public void whenObliqueLineThenWin(){
+        chessBoard.putPiece(1);
+        chessBoard.putPiece(2);
+        chessBoard.putPiece(2);
+        chessBoard.putPiece(3);
+        chessBoard.putPiece(1);
+        chessBoard.putPiece(3);
+        String result = chessBoard.putPiece(3);
+        Assert.assertEquals("红方获胜", result);
+    }
 }
