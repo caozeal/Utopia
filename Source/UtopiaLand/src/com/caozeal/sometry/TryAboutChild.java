@@ -1,4 +1,4 @@
-package com.caozeal.someTry;
+package com.caozeal.sometry;
 
 public class TryAboutChild extends TryAboutFather {
 

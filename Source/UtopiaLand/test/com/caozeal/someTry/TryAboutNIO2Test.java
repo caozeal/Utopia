@@ -1,7 +1,7 @@
-package com.caozeal.someTry;
+package com.caozeal.sometry;
 /**.
  * <p>创建时间：2017年8月3日下午5:29:58
- * <p>com.caozeal.someTry
+ * <p>com.caozeal.sometry
  * @author  caozhiyong
  * @version 1.0
  */

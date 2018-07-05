@@ -1,4 +1,4 @@
-package com.caozeal.someTry;
+package com.caozeal.sometry;
 
 import static org.assertj.core.api.Assertions.*;
 import org.junit.Test;
