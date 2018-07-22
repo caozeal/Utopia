@@ -19,4 +19,27 @@ public class HelloController {
         return "hello, world! This com from spring!";
     }
 
+    public static void main(String[] args) {
+        int a = testX();
+        System.out.println("0-" + a);
+    }
+
+    private static int testX() {
+        int i = 1;
+        try{
+            System.out.println("1-" + i);
+            System.out.println("x-" + i);
+            throw new Exception();
+//            return i;
+        }catch (Exception e){
+            ++i;
+            return i;
+        }
+        finally {
+            ++i;
+            return i;
+//            System.out.println("2-" + i);
+        }
+    }
+
 }
