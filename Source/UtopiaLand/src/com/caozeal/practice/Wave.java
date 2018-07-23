@@ -1,4 +1,4 @@
-package com.caozeal.sometry;
+package com.caozeal.practice;
 
 import java.util.ArrayList;
 import java.util.List;

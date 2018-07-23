@@ -1,4 +1,4 @@
-package com.caozeal.sometry.connect4;
+package com.caozeal.practice.connect4;
 
 import org.apache.commons.lang.StringUtils;
 
@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 /**.
  * <p>创建时间：2017年9月17日下午9:27:19
- * <p>com.caozeal.sometry.connect4
+ * <p>com.caozeal.practice.connect4
  * @author  caozeal
  * @version 1.0
  */

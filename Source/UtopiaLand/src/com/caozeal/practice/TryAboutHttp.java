@@ -1,4 +1,4 @@
-package com.caozeal.sometry;
+package com.caozeal.practice;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -18,7 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 /**.
  * 关于Http的一些尝试
  * <p>创建时间：2017年6月10日下午10:35:49
- * <p>com.caozeal.sometry
+ * <p>com.caozeal.practice
  * @author  caozeal
  * @version 1.0
  *

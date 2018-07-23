@@ -1,4 +1,4 @@
-package com.caozeal.sometry;
+package com.caozeal.practice;
 
 import org.junit.Assert;
 import org.junit.Before;

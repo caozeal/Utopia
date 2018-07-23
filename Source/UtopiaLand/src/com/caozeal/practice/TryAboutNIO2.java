@@ -1,4 +1,4 @@
-package com.caozeal.sometry;
+package com.caozeal.practice;
 
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Controller;
 /**.
  * 关于NIO.2的一些尝试
  * <p>创建时间： 2017年8月02日上午10:35:49
- * <p>com.caozeal.sometry
+ * <p>com.caozeal.practice
  * @author  caozeal
  * @version 1.0
  *

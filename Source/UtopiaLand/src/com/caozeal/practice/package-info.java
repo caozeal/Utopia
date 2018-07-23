@@ -2,4 +2,4 @@
  * @author caozeal
  *
  */
-package com.caozeal.sometry;
+package com.caozeal.practice;

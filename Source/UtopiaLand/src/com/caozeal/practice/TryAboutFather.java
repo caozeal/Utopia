@@ -1,4 +1,4 @@
-package com.caozeal.sometry;
+package com.caozeal.practice;
 
 public class TryAboutFather {
 

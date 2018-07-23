@@ -1,5 +1,8 @@
-package com.caozeal.sometry;
+package com.caozeal.practice;
 
+/**
+ * @author caozhiyong
+ */
 public class Point {
     private int x;
     private int y;
@@ -18,6 +21,7 @@ public class Point {
         return y;
     }
 
+    @Override
     public boolean equals(Object obj) {
         if (obj instanceof Point) {
             Point pt = (Point)obj;
@@ -26,6 +30,7 @@ public class Point {
         return super.equals(obj);
     }
 
+    @Override
     public String toString() {
         return "[x=" + x + ",y=" + y + "]";
     }
