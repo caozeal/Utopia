@@ -1,4 +1,4 @@
-package com.caozeal.sometry.rocketmq;
+package com.caozeal.practice.rocketmq;
 
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * <p>创建时间：2018/1/4 14:21
- * <p>com.caozeal.sometry.rocketmq
+ * <p>com.caozeal.practice.rocketmq
  * @author caozhiyong
  * @version 1.0
  */

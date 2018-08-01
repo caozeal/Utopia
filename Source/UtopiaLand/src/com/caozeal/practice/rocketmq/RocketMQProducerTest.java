@@ -1,10 +1,10 @@
-package com.caozeal.sometry.rocketmq;
+package com.caozeal.practice.rocketmq;
 
 import org.apache.rocketmq.common.message.Message;
 
 /**
  * <p>创建时间：2018/1/4 14:57
- * <p>com.caozeal.sometry.rocketmq
+ * <p>com.caozeal.practice.rocketmq
  * @author caozhiyong
  * @version 1.0
  */
