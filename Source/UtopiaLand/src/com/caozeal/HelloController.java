@@ -1,5 +1,6 @@
 package com.caozeal;
 
+import com.caozeal.sometry.TryAboutFather;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -22,6 +23,7 @@ public class HelloController {
     public static void main(String[] args) {
         int a = testX();
         System.out.println("0-" + a);
+        TryAboutFather.test();
     }
 
     private static int testX() {
