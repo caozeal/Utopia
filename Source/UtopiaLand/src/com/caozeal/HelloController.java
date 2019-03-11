@@ -1,8 +1,9 @@
 package com.caozeal;
 
-import com.caozeal.sometry.TryAboutFather;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -20,28 +21,32 @@ public class HelloController {
         return "hello, world! This com from spring!";
     }
 
-    public static void main(String[] args) {
-        int a = testX();
-        System.out.println("0-" + a);
-        TryAboutFather.test();
+    @PostMapping("test")
+    public String testParam(@RequestParam String a){
+        return a;
     }
 
-    private static int testX() {
-        int i = 1;
-        try{
-            System.out.println("1-" + i);
-            System.out.println("x-" + i);
-            throw new Exception();
+//    public static void main(String[] args) {
+//        int a = testX();
+//        System.out.println("0-" + a);
+//    }
+//
+//    private static int testX() {
+//        int i = 1;
+//        try{
+//            System.out.println("1-" + i);
+//            System.out.println("x-" + i);
+//            throw new Exception();
+////            return i;
+//        }catch (Exception e){
+//            ++i;
 //            return i;
-        }catch (Exception e){
-            ++i;
-            return i;
-        }
-        finally {
-            ++i;
-            return i;
-//            System.out.println("2-" + i);
-        }
-    }
+//        }
+//        finally {
+//            ++i;
+//            return i;
+////            System.out.println("2-" + i);
+//        }
+//    }
 
 }

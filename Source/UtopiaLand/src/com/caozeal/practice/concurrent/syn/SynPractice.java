@@ -11,29 +11,29 @@ import java.util.concurrent.Executors;
  */
 public class SynPractice {
 
-    public void test1() {
+    public static void test1() {
         Object lock = new Object();
-        synchronized (lock) {
+//        synchronized (lock) {
 //            try {
 //                wait();
 //            } catch (InterruptedException e) {
 //                e.printStackTrace();
 //            }
             for (int i = 0; i < 100; i++) {
-                try {
-                    lock.wait();           //wait(),notify()只能针对被锁的对象
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+//                try {
+//                    lock.wait();           //wait(),notify()只能针对被锁的对象
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
                 System.out.print(i + "11 ");
-                lock.notify();
+//                lock.notify();
             }
-        }
+//        }
     }
 
-    public void test2(){
+    public static void test2(){
         Object lock = new Object();
-        synchronized (lock) {
+//        synchronized (lock) {
             for (int i = 0; i < 100; i++) {
                 System.out.print(i + "22 ");
                 lock.notify();
@@ -42,7 +42,7 @@ public class SynPractice {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-            }
+//            }
 //            notify();
         }
     }
@@ -51,7 +51,7 @@ public class SynPractice {
         SynPractice e1 = new SynPractice();
         SynPractice e2 = new SynPractice();
         ExecutorService executorService = Executors.newCachedThreadPool();
-        executorService.execute(() -> e1.test1());
-        executorService.execute(() -> e1.test2());
+        executorService.execute(() -> SynPractice.test1());
+        executorService.execute(() -> SynPractice.test1());
     }
 }
