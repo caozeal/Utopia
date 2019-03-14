@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TestTryTest {
 
-//    @Test
+//    @OdevityMain2
 //    public void seleniumTest(){
 //        WebDriver driver = new FirefoxDriver();
 //        driver.get("http://www.baidu.com");
