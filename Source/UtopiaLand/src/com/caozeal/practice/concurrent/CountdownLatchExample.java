@@ -4,7 +4,7 @@ import java.util.concurrent.*;
 
 /**
  * <p>创建时间：2018/7/31 11:13
- * <p>com.caozeal.practice.concurrent
+ * <p>com.writ.practice.concurrent
  * @author caozhiyong
  * @version 1.0
  */

@@ -13,7 +13,7 @@ public class HelloController {
      * 欢迎
      * <p>
      * 创建时间：2017年6月10日下午10:36:01
-     * @author caozeal
+     * @author writ
      * @return
      */
     @RequestMapping("hello")

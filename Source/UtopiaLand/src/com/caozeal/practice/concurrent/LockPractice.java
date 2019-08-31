@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * <p>创建时间：2018/7/30 17:11
- * <p>com.caozeal.practice.concurrent
+ * <p>com.writ.practice.concurrent
  * @author caozhiyong
  * @version 1.0
  */

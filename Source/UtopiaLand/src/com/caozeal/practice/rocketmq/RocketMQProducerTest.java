@@ -4,7 +4,7 @@ import org.apache.rocketmq.common.message.Message;
 
 /**
  * <p>创建时间：2018/1/4 14:57
- * <p>com.caozeal.practice.rocketmq
+ * <p>com.writ.practice.rocketmq
  * @author caozhiyong
  * @version 1.0
  */

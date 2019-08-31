@@ -5,7 +5,7 @@ import java.util.concurrent.locks.Lock;
 
 /**
  * <p>创建时间：2019/3/14 10:57
- * <p>com.caozeal.practice.concurrent.odevity
+ * <p>com.writ.practice.concurrent.odevity
  * @author caozhiyong
  * @version 1.0
  */

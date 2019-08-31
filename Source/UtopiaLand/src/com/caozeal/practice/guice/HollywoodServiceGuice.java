@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * <p>创建时间：2018/7/3 13:47
- * <p>com.caozeal.practice.guice
+ * <p>com.writ.practice.guice
  * @author caozhiyong
  * @version 1.0
  */

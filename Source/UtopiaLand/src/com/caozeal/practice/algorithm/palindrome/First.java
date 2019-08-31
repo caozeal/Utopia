@@ -3,7 +3,7 @@ package com.caozeal.practice.algorithm.palindrome;
 /**
  * 1.更通用一些的方法
  * <p>创建时间：2018/7/23 15:44
- * <p>com.caozeal.practice.algorithm.palindrome
+ * <p>com.writ.practice.algorithm.palindrome
  * @author caozhiyong
  * @version 1.0
  */

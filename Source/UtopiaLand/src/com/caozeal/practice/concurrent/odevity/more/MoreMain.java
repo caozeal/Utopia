@@ -4,7 +4,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * <p>创建时间：2019/3/14 13:56
- * <p>com.caozeal.practice.concurrent.odevity.more
+ * <p>com.writ.practice.concurrent.odevity.more
  * @author caozhiyong
  * @version 1.0
  */

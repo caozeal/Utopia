@@ -10,7 +10,7 @@ import java.util.UUID;
 
 /**
  * <p>创建时间：2018/1/4 14:09
- * <p>com.caozeal.practice.rocketmq
+ * <p>com.writ.practice.rocketmq
  * @author caozhiyong
  * @version 1.0
  */

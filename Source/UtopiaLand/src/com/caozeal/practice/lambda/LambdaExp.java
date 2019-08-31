@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 /**
  * <p>创建时间：2018/10/26 16:48
- * <p>com.caozeal.practice.lambda
+ * <p>com.writ.practice.lambda
  * @author caozhiyong
  * @version 1.0
  */

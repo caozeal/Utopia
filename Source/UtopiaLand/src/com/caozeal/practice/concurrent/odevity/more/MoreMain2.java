@@ -5,7 +5,7 @@ import java.util.concurrent.Semaphore;
 /**
  * 使用到了信号量Semphore,同时只有一个线程在执行
  * <p>创建时间：2019/3/14 14:02
- * <p>com.caozeal.practice.concurrent.odevity.more
+ * <p>com.writ.practice.concurrent.odevity.more
  * @author caozhiyong
  * @version 1.0
  */

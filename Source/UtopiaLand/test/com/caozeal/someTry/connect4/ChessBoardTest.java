@@ -1,8 +1,8 @@
 package com.caozeal.practice.connect4;
 /**.
  * <p>创建时间：2017年9月17日下午9:14:21
- * <p>com.caozeal.practice.connect4
- * @author  caozeal
+ * <p>com.writ.practice.connect4
+ * @author  writ
  * @version 1.0
  */
 import org.apache.commons.lang.StringUtils;

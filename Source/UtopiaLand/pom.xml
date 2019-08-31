@@ -4,7 +4,11 @@
     <groupId>UtopiaLand</groupId>
     <artifactId>UtopiaLand</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <modules>
+        <module>client_server</module>
+        <module>WordMatch</module>
+    </modules>
+    <packaging>pom</packaging>
     <name>UtopiaLand</name>
     <description/>
     <properties>
@@ -124,7 +128,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.4</version>
+            <version>1.18.6</version>
         </dependency>
     </dependencies>
     <build>

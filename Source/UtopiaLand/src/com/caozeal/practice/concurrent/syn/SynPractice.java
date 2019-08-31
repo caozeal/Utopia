@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 
 /**
  * <p>创建时间：2018/7/30 15:14
- * <p>com.caozeal.practice.concurrent
+ * <p>com.writ.practice.concurrent
  * @author caozhiyong
  * @version 1.0
  */

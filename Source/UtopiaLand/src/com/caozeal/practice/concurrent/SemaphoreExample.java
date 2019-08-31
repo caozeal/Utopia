@@ -6,7 +6,7 @@ import java.util.concurrent.Semaphore;
 
 /**
  * <p>创建时间：2018/7/31 12:34
- * <p>com.caozeal.practice.concurrent
+ * <p>com.writ.practice.concurrent
  * @author caozhiyong
  * @version 1.0
  */

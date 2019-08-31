@@ -6,8 +6,8 @@ import java.util.Arrays;
 
 /**.
  * <p>创建时间：2017年9月17日下午9:27:19
- * <p>com.caozeal.practice.connect4
- * @author  caozeal
+ * <p>com.writ.practice.connect4
+ * @author  writ
  * @version 1.0
  */
 public class ChessBoard {

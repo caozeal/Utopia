@@ -4,7 +4,7 @@ import java.util.Random;
 
 /**
  * <p>创建时间：2018/8/1 16:18
- * <p>com.caozeal.practice.concurrent.syn
+ * <p>com.writ.practice.concurrent.syn
  * @author caozhiyong
  * @version 1.0
  */

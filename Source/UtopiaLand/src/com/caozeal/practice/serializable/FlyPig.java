@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * <p>创建时间：2018/8/31 11:08
- * <p>com.caozeal.practice.serializable
+ * <p>com.writ.practice.serializable
  * @author caozhiyong
  * @version 1.0
  */

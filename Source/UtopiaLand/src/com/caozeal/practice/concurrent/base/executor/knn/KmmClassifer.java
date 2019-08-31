@@ -10,14 +10,14 @@ import java.util.List;
 
 /**
  * <p>创建时间：2019/3/11 20:14
- * <p>com.caozeal.practice.concurrent.base.executor.knn
+ * <p>com.writ.practice.concurrent.base.executor.knn
  * @author caozhiyong
  * @version 1.0
  */
 @AllArgsConstructor
 public class KmmClassifer {
 
-    private final List<? extends Sample> dataSet;
+//    private final List<? extends Sample> dataSet;
 
     private int k;
 

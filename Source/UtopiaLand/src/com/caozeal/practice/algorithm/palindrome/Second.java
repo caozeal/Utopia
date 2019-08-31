@@ -9,7 +9,7 @@ import org.apache.commons.lang.StringUtils;
  * 3. 多次测试，性能貌似下降了
  * 4. 数字变大的话，比如586之上最小的回文数，性能比第一种要提高许多
  * <p>创建时间：2018/7/23 16:46
- * <p>com.caozeal.practice.algorithm.palindrome
+ * <p>com.writ.practice.algorithm.palindrome
  * @author caozhiyong
  * @version 1.0
  */

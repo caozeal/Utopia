@@ -18,8 +18,8 @@ import org.springframework.web.multipart.MultipartFile;
 /**.
  * 关于Http的一些尝试
  * <p>创建时间：2017年6月10日下午10:35:49
- * <p>com.caozeal.practice
- * @author  caozeal
+ * <p>com.writ.practice
+ * @author  writ
  * @version 1.0
  *
  */

@@ -6,7 +6,7 @@ import com.google.inject.AbstractModule;
 
 /**
  * <p>创建时间：2018/7/3 11:22
- * <p>com.caozeal.practice.guice.module
+ * <p>com.writ.practice.guice.module
  * @author caozhiyong
  * @version 1.0
  */
