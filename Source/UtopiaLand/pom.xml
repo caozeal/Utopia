@@ -70,7 +70,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.30</version>
+            <version>8.0.28</version>
         </dependency>
         <!--tika，暂时用到junit，看到项目中引用了，我就也引用这个吧，具体细节留待以后研究-->
         <!-- 之前依赖1.9版本会自动引入junit，换到1.16之后不再自动依赖junit了 -->
