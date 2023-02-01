@@ -5,19 +5,7 @@ import java.awt.*;
 
 public class SortFrame extends JFrame {
 
-    public static void main(String[] args) {
-        SortFrame frame = new SortFrame();
-    }
-
     public SortFrame() throws HeadlessException {
-        int[] elements = {1, 3, 3, 2, 10, 6, 5};
-        SortPanel panel = new SortPanel(elements);
-        this.add(panel);
-        this.setSize(1000, 200);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setVisible(true);
-        BubbleSort sort = new BubbleSort(panel);
-        sort.sort(elements);
     }
 
     static class SortPanel extends JPanel implements Runnable{

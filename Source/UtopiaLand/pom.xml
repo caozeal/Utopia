@@ -6,6 +6,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>client_server</module>
+        <module>sort_applet</module>
         <module>WordMatch</module>
     </modules>
     <packaging>pom</packaging>
