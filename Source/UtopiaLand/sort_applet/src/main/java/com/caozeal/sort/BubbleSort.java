@@ -1,20 +1,17 @@
 package com.caozeal.sort;
 
-import javax.swing.*;
-
 public class BubbleSort extends AbstractPanelSort{
 
-    public BubbleSort(SortFrame.SortPanel panel) {
+    public BubbleSort(SortPanel panel) {
         super(panel);
     }
 
+    @Override
     public int[] sort(int[] origin){
         boolean swap;
         for (int i = origin.length-1; i > 0; i--) {
-            if(panel != null){
-                panel.setCurrent(0);
-                repaint();
-            }
+            repaint(0);
+
             swap = false;
             for (int j = 0; j < i; j++) {
                 if(origin[j] > origin[j+1]){
@@ -22,18 +19,18 @@ public class BubbleSort extends AbstractPanelSort{
                     swap = true;
                 }
                 if(panel != null){
-                    panel.setCurrent(j+1);
-                    repaint();
+                    repaint(j+1);
                 }
             }
+            panel.getSorted().add(i);
             System.out.println("==========sort round============");
-            repaint();
+            repaint(null);
             if(!swap){
                 break;
             }
         }
         System.out.println("==========sort over============");
-        repaint();
+        repaint(null);
         return origin;
     }
 
